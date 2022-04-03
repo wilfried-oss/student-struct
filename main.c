@@ -9,9 +9,6 @@ int main(int argc, char *argv[])
 
     giveStudents(students, n);
 
-    displayStudents(students, n);
-    /*Ici on veut rediriger la sortie de displayStudents vers un fichier.txt*/
-
-    printf("\n");
+    saveInFile(students, n);
     return 0;
 }
