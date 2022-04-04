@@ -1,8 +1,5 @@
 #ifndef STUDENT_H_INCLUDED
 #define STUDENT_H_INCLUDED
-#define TAILLE_MAX 100
-#include <stdlib.h>
-#include <stdio.h>
 
 typedef struct Student
 {

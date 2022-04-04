@@ -2,13 +2,23 @@
 
 int main(int argc, char *argv[])
 {
-    int n;
+    int size = 0;
     printf("\nCombien d'élèves voulez-vous enregistrer : ");
-    scanf("%d", &n);
-    Student students[n];
+    scanf("%d", &size);
 
-    giveStudents(students, n);
+    Student *students;
+    if (size > 0)
+    {
+        students = malloc(size * sizeof(Student));
+        if (students == NULL)
+        {
+            exit(0);
+        }
 
-    saveInFile(students, n);
+        giveStudents(students, size);
+        saveInFile(students, size);
+        free(students);
+    }
+
     return 0;
 }

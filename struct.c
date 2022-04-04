@@ -1,4 +1,6 @@
 #include "struct.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 Student *giveStudents(Student students[], int size)
 {
@@ -11,13 +13,11 @@ Student *giveStudents(Student students[], int size)
         scanf("%s", students[i].lastname);
 
         printf("\n");
-
-        printf("\tFirst average : ");
-        scanf("%d", &students[i].notes[0]);
-
-        printf("\tSecond average : ");
-        scanf("%d", &students[i].notes[1]);
-
+        for (int j = 0; j < 2; j++)
+        {
+            printf("\tAverage %d : ", j + 1);
+            scanf("%d", &students[i].notes[j]);
+        }
         printf("\n");
     }
     return students;
